@@ -34,6 +34,7 @@
     
     
     
+    
 
     backgroundStepper.frame = CGRectMake(0, 0, 300, 50);
     backgroundStepper.center = self.view.center;
