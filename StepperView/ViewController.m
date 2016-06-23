@@ -20,39 +20,52 @@
 
 
     UIView *backgroundStepper = [[UIView alloc] init];
-    UIView *subStepper = [[UIView alloc] init];
-    UIView *addStepper = [[UIView alloc] init];
-    
-    
-//    UILabel *plusLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
-//    [plusLabel setText:@"10"];
-////    [plusLabel setTextColor:[UIColor redColor]];
-//    [[self view] addSubview:plusLabel];
-   
-    
-    
-    
-    
-    
-    
+    UIButton *addButton = [[UIButton alloc] init];
+    UIButton *subButton = [[UIButton alloc] init];
 
+    
+    
+//    Background Square
     backgroundStepper.frame = CGRectMake(0, 0, 300, 50);
     backgroundStepper.center = self.view.center;
-    backgroundStepper.backgroundColor = [UIColor colorWithRed:92/255.0 green:107/255.0 blue:192/255.0 alpha:1.0];
+    backgroundStepper.backgroundColor = [UIColor colorWithRed:139/255.0 green:195/255.0 blue:74/255.0 alpha:1.0];
 
     [self.view addSubview:backgroundStepper];
     
     
     
-    subStepper.frame = CGRectMake(backgroundStepper.frame.size.width/2 + 50, backgroundStepper.frame.size.height/2 - 25, 100, 50);
-    subStepper.backgroundColor = [UIColor colorWithRed:26/255.0 green:35/255.0 blue:126/255.0 alpha:1.0];
-    [backgroundStepper addSubview:subStepper];
+//   Label
+    UILabel *plusLabel = [[UILabel alloc] initWithFrame:CGRectMake(195, 318, 100, 100)];
+    plusLabel.font=[plusLabel.font fontWithSize:25];
+    [plusLabel setText:@"10"];
+        [plusLabel setTextColor:[UIColor colorWithRed:213/255.0 green:0/255.0 blue:0/255.0 alpha:1.0]];
+    [[self view] addSubview:plusLabel];
+    
+
     
     
     
-    addStepper.frame = CGRectMake(backgroundStepper.frame.size.width/2 - 150, backgroundStepper.frame.size.height/2 - 25, 100, 50);
-    addStepper.backgroundColor = [UIColor colorWithRed:26/255.0 green:35/255.0 blue:126/255.0 alpha:1.0];
-    [backgroundStepper addSubview:addStepper];
+    
+    
+//    Addition Button
+    
+    addButton.frame = CGRectMake(backgroundStepper.frame.size.width/2 + 50, backgroundStepper.frame.size.height/2 - 25, 100, 50);
+    addButton.backgroundColor = [UIColor colorWithRed:51/255.0 green:105/255.0 blue:30/255.0 alpha:1.0];
+    [addButton setTitle:@"+" forState:UIControlStateNormal];
+    [backgroundStepper addSubview:addButton];
+    
+    
+    
+//    Subtraction Button
+      subButton.frame = CGRectMake(backgroundStepper.frame.size.width/2 - 150, backgroundStepper.frame.size.height/2 - 25, 100, 50);
+    
+    subButton.backgroundColor = [UIColor colorWithRed:51/255.0 green:105/255.0 blue:30/255.0 alpha:1.0];
+     [subButton setTitle:@"-" forState:UIControlStateNormal];
+    [backgroundStepper addSubview:subButton];
+    
+    
+    
+
     
     
 }
