@@ -7,72 +7,40 @@
 //
 
 #import "ViewController.h"
+#import "StepperView.h"
 
 @interface ViewController ()
+
+@property (nonatomic,strong) UILabel *valueLabel;
 
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     
-
-
-    UIView *backgroundStepper = [[UIView alloc] init];
-    UIButton *addButton = [[UIButton alloc] init];
-    UIButton *subButton = [[UIButton alloc] init];
-
+    StepperView *stepperView = [[StepperView alloc] initWithFrame:CGRectMake(0, 0, 300, 50)];
     
+    stepperView.center = self.view.center;
+    [self.view addSubview:stepperView];
+    stepperView.delegate = self;
     
-//    Background Square
-    backgroundStepper.frame = CGRectMake(0, 0, 300, 50);
-    backgroundStepper.center = self.view.center;
-    backgroundStepper.backgroundColor = [UIColor colorWithRed:139/255.0 green:195/255.0 blue:74/255.0 alpha:1.0];
-
-    [self.view addSubview:backgroundStepper];
+    //    Label
+    self.valueLabel = [[UILabel alloc] initWithFrame:CGRectMake(197, 312, 100, 100)];
+    [self.valueLabel setTextColor:[UIColor whiteColor]];
     
+    _valueLabel.font=[_valueLabel.font fontWithSize:25];
+        [_valueLabel setText:@"0"];
     
-    
-//   Label
-    UILabel *plusLabel = [[UILabel alloc] initWithFrame:CGRectMake(195, 318, 100, 100)];
-    plusLabel.font=[plusLabel.font fontWithSize:25];
-    [plusLabel setText:@"10"];
-        [plusLabel setTextColor:[UIColor colorWithRed:213/255.0 green:0/255.0 blue:0/255.0 alpha:1.0]];
-    [[self view] addSubview:plusLabel];
-    
-
-    
-    
-    
-    
-    
-//    Addition Button
-    
-    addButton.frame = CGRectMake(backgroundStepper.frame.size.width/2 + 50, backgroundStepper.frame.size.height/2 - 25, 100, 50);
-    addButton.backgroundColor = [UIColor colorWithRed:51/255.0 green:105/255.0 blue:30/255.0 alpha:1.0];
-    [addButton setTitle:@"+" forState:UIControlStateNormal];
-    [backgroundStepper addSubview:addButton];
-    
-    
-    
-//    Subtraction Button
-      subButton.frame = CGRectMake(backgroundStepper.frame.size.width/2 - 150, backgroundStepper.frame.size.height/2 - 25, 100, 50);
-    
-    subButton.backgroundColor = [UIColor colorWithRed:51/255.0 green:105/255.0 blue:30/255.0 alpha:1.0];
-     [subButton setTitle:@"-" forState:UIControlStateNormal];
-    [backgroundStepper addSubview:subButton];
-    
-    
-    
-
-    
-    
+    [self.view addSubview:self.
+     
+     valueLabel];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)stepperView:(StepperView *)stepperView valueChanged:(NSInteger)value {
+    
+    self.valueLabel.text = [NSString stringWithFormat:@"%ld", (long)value];
 }
-
 @end

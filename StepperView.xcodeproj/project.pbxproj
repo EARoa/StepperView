@@ -13,6 +13,7 @@
 		10B623081D1B00DA00054E64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10B623061D1B00DA00054E64 /* Main.storyboard */; };
 		10B6230A1D1B00DA00054E64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10B623091D1B00DA00054E64 /* Assets.xcassets */; };
 		10B6230D1D1B00DA00054E64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10B6230B1D1B00DA00054E64 /* LaunchScreen.storyboard */; };
+		10FED44A1D3056F000856FD9 /* StepperView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FED4491D3056F000856FD9 /* StepperView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		10B623091D1B00DA00054E64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10B6230C1D1B00DA00054E64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10B6230E1D1B00DA00054E64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10FED4481D3056F000856FD9 /* StepperView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepperView.h; sourceTree = "<group>"; };
+		10FED4491D3056F000856FD9 /* StepperView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepperView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				10B6230B1D1B00DA00054E64 /* LaunchScreen.storyboard */,
 				10B6230E1D1B00DA00054E64 /* Info.plist */,
 				10B622FD1D1B00DA00054E64 /* Supporting Files */,
+				10FED4481D3056F000856FD9 /* StepperView.h */,
+				10FED4491D3056F000856FD9 /* StepperView.m */,
 			);
 			path = StepperView;
 			sourceTree = "<group>";
@@ -151,6 +156,7 @@
 			files = (
 				10B623051D1B00DA00054E64 /* ViewController.m in Sources */,
 				10B623021D1B00DA00054E64 /* AppDelegate.m in Sources */,
+				10FED44A1D3056F000856FD9 /* StepperView.m in Sources */,
 				10B622FF1D1B00DA00054E64 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +308,7 @@
 				10B623131D1B00DA00054E64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
